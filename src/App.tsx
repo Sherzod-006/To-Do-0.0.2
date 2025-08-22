@@ -10,7 +10,7 @@ const App = () => {
     <main className="bg-blue-100 flex min-h-screen">
       <BrowserRouter>
         <AsideBar />
-        <section className="ml-64 p-5 w-full">
+        <section className="ml-64 py-5 px-10 w-full">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/add-task" element={<AddTask />} />
