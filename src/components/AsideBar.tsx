@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faPlus, faBorderAll, faUser } from '@fortawesome/free-solid-svg-icons';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
@@ -12,9 +13,9 @@ const AsideBar = () => {
     //TEMPLATES
     function renderLink(className: string, href: string, value: string, icons: IconProp){
         return (
-            <a className={className} href={href}>
+            <Link className={className} to={href}>
                 <FontAwesomeIcon icon={icons} /> {value}
-            </a>
+            </Link>
         );
     };
 
@@ -23,10 +24,10 @@ const AsideBar = () => {
       <h1 className={title}>Task Manager</h1>
       <nav>
         <ul>
-            <li>{renderLink(linkClasses, "#", "Dashboard", faHouse)}</li>
-            <li>{renderLink(linkClasses, "#", "Add Task", faPlus)}</li>
-            <li>{renderLink(linkClasses, "#", "All", faBorderAll)}</li>
-            <li>{renderLink(linkClasses, "#", "Profile", faUser)}</li>
+            <li>{renderLink(linkClasses, "/", "Dashboard", faHouse)}</li>
+            <li>{renderLink(linkClasses, "/add-task", "Add Task", faPlus)}</li>
+            <li>{renderLink(linkClasses, "/all", "All", faBorderAll)}</li>
+            <li>{renderLink(linkClasses, "/profile", "Profile", faUser)}</li>
         </ul>
       </nav>
     </aside>
