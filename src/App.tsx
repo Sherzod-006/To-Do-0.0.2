@@ -1,7 +1,10 @@
+import AsideBar from './components/AsideBar';
+
 const App = () => {
   return (
-    <div>
-      <h1>App</h1>
+    <div className="bg-blue-100 flex min-h-screen p-5">
+      <AsideBar />
+      <h1 className='ml-64'>hello world</h1>
     </div>
   )
 }
