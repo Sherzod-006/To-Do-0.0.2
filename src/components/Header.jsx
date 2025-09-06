@@ -15,7 +15,7 @@ import { useState } from "react";
 const Header = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   return (
-    <header className="flex justify-between items-center bg-gray-800 text-white md:px-10 px-4 py-2">
+    <header className="sticky top-0 z-50 flex justify-between items-center bg-gray-800 text-white md:px-10 px-4 py-2">
       <div className="flex items-center gap-4">
         <button className="hover:bg-gray-700 active:bg-gray-600 p-2 rounded-full text-2xl">
           <FontAwesomeIcon icon={faBars} />
