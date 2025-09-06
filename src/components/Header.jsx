@@ -12,12 +12,15 @@ import { Link } from "react-router-dom";
 //IMPORTING HOOKS
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ setIsOpen }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   return (
-    <header className="sticky top-0 z-50 flex justify-between items-center bg-gray-800 text-white md:px-10 px-4 py-2">
+    <header className="col-span-18 row-span-1 z-50 flex justify-between items-center bg-gray-800 text-white md:px-10 px-4 py-2">
       <div className="flex items-center gap-4">
-        <button className="hover:bg-gray-700 active:bg-gray-600 p-2 rounded-full text-2xl">
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="hover:bg-gray-700 active:bg-gray-600 p-2 rounded-full text-2xl"
+        >
           <FontAwesomeIcon icon={faBars} />
         </button>
         <Link to="/" className="text-2xl font-bold">

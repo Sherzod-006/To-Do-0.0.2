@@ -1,8 +1,12 @@
 import React from "react";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ isOpen }) => {
   return (
-    <div className="fixed top-16 w-54 min-h-screen bg-gray-800 text-white p-4">
+    <div
+      className={`row-span-8 z-50 bg-gray-900 text-white p-4 overflow-x-hidden ${
+        isOpen ? "col-span-3" : "col-span-1"
+      }`}
+    >
       <h1>Menu</h1>
     </div>
   );
