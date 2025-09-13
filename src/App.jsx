@@ -1,18 +1,9 @@
 //IMPORTING RRD
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-//IMPORTING LAYOUTS
-import RootLayout from "./layouts/RootLayout";
-//IMPORTING PAGES
-import HomePage from "./pages/HomePage";
+import { RouterProvider } from "react-router-dom";
+//IMPORTING ROUTES
+import { routes } from "./routes/MainRoute";
 
 const App = () => {
-  const routes = createBrowserRouter([
-    {
-      path: "/",
-      element: <RootLayout />,
-      children: [{ index: true, element: <HomePage /> }],
-    },
-  ]);
   return <RouterProvider router={routes} />;
 };
 

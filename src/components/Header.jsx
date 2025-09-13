@@ -40,7 +40,7 @@ const Header = ({ setIsOpen }) => {
       <div>
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
-          className="bg-gray-700 active:bg-gray-600 p-0.5 rounded-full flex gap-1 items-center"
+          className="bg-gray-700 p-0.5 rounded-full flex gap-1 items-center"
         >
           <FontAwesomeIcon
             icon={faMoon}

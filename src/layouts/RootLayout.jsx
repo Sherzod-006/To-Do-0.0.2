@@ -4,14 +4,13 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 //IMPORTING COMPONENTS
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import HamburgerMenu from "../components/HamburgerMenu";
 
 const RootLayout = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <main className="grid grid-cols-18 grid-rows-9 min-h-screen  grid-flow-col-dense">
+    <main className="grid grid-cols-18 grid-rows-9 min-h-screen">
       <Header setIsOpen={setIsOpen} />
       <HamburgerMenu isOpen={isOpen} />
       <main
